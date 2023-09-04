@@ -4,39 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visita técnica</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-            }
-            #gallery {
-                width: 80%;
-                margin: 0 auto;
-                position: relative;
-                overflow: hidden;
-            }
-            #gallery img {
-                width: 100%;
-                max-width: 100%;
-                height: auto;
-                display: none;
-            }
-            #gallery .controls {
-                margin-top: 10px;
-            }
-            #gallery .controls button {
-                padding: 10px 20px;
-                font-size: 16px;
-                background-color: #3498db;
-                color: #fff;
-                border: none;
-                cursor: pointer;
-                margin: 0 5px;
-            }
-            #gallery .controls button:hover {
-                background-color: #2980b9;
-            }
-        </style>
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d4cdb4; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 20px; 
+        }
+        
+        #text {
+            flex: 1; 
+            text-align: left; 
+            padding-right: 20px; 
+        }
+
+        #gallery {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #gallery img {
+            width: 600px; 
+            height: 400px; 
+            display: none;
+            object-fit: cover;
+        }
+
+        #gallery .controls {
+            margin-top: 10px;
+        }
+
+        #gallery .controls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        #gallery .controls button:hover {
+            background-color: #2980b9;
+        }
+    </style>
     </head>
 <body>
     <h1>Visita técnica - Campus Colorado do Oeste</h1>
