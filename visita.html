@@ -1,12 +1,126 @@
-(!!!)"criar um código referente a visita técnica, contendo um breve relatório na parte supeior, 
-seguido de uma galeria de 10 fotos (em uma pasta) que posssuam aopção de ampliar e diminuir":
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  title
-</head>
-  <body>
-    Aqui ficará o relatório da visita técnica<br>
-    <h1> Aqui ficará a Galeria de fotos</h1><br>
-  </body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visita técnica</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+            #gallery {
+                width: 80%;
+                margin: 0 auto;
+                position: relative;
+                overflow: hidden;
+            }
+            #gallery img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                display: none;
+            }
+            #gallery .controls {
+                margin-top: 10px;
+            }
+            #gallery .controls button {
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #3498db;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                margin: 0 5px;
+            }
+            #gallery .controls button:hover {
+                background-color: #2980b9;
+            }
+        </style>
+    </head>
+<body>
+    <h1>Visita técnica - Campus Colorado do Oeste</h1>
+    <p>
+        No dia 9 de Agosto de 2023, os alunos do terceiro ano no curso técnico de informática<br>
+        do Instituto Federal de Rondônia foram convidados a realizar uma visita técnica ao campus<br>
+        de Colorado do Oeste, com o intuito principal de conhecer os cursos, ambientes e projetos<br>
+        realizados pelos estudantes deste.<br>
+        Com as apresentações e palestras, tivemos conhecimento de iniciativas como o "Projeto Judô",<br>
+        o "Projeto Silagem", que se tratam de diversos conteúdos virtuais e vídeos relacionados aos seus títulos,<br>
+        que contam com a produção de um pequeno grupo de trabalhadores e alunos que se uniram aos projetos.<br>
+        Além disto,foi-se apresentado o projeto do Ifro Mobile, um aplicativo que tem como função essencial tornar<br>
+        a convivência acadêmica dos estudantes e profissionais mais simpes e organizada, juntando aspectos como: notas, número de faltas,<br>
+        horários das aulas e o id de estudante de cada usuário.<br>
+        Após apresentar os projetos e discutir sobre eles, os alunos foram convidados a assistir uma oficina de fotografia,uma palestra na qual<br>
+        se debatia sobre a perspectiva artística dos registros fotográficos, e nos dava dicas de técnicas para capturar momentos com uma melhor aptidão.<br>
+        Após isso, fomos convidados a visitar os ambientes do campus enquanto tirávamos fotos, com intenção de aplicar os conhecimentos compartilhados conosco a pouco.</p>
+    
+    <div id="gallery">
+        <img src="imagem1.jpg" alt="Imagem 1">
+        <img src="imagem2.jpg" alt="Imagem 2">
+        <img src="imagem3.jpg" alt="Imagem 3">
+        <img src="imagem4.jpg" alt="Imagem 4">
+        <img src="imagem5.jpg" alt="Imagem 5">
+        <img src="imagem6.jpg" alt="Imagem 6">
+        <img src="imagem7.jpg" alt="Imagem 7">
+        <img src="imagem8.jpg" alt="Imagem 8">
+        <img src="imagem9.jpg" alt="Imagem 9">
+        <img src="imagem10.jpg" alt="Imagem 10">
+        
+        <div class="controls">
+            <button id="prevBtn">Anterior</button>
+            <button id="nextBtn">Próxima</button>
+            <button id="zoomInBtn">Aumentar</button>
+            <button id="zoomOutBtn">Diminuir</button>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('#gallery img');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const zoomInBtn = document.getElementById('zoomInBtn');
+        const zoomOutBtn = document.getElementById('zoomOutBtn');
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                if (i === index) {
+                    img.style.display = 'block';
+                } else {
+                    img.style.display = 'none';
+                }
+            });
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function zoomIn() {
+            const currentImage = images[currentIndex];
+            const currentWidth = currentImage.clientWidth;
+            currentImage.style.width = currentWidth * 1.2 + 'px';
+        }
+
+        function zoomOut() {
+            const currentImage = images[currentIndex];
+            const currentWidth = currentImage.clientWidth;
+            currentImage.style.width = currentWidth / 1.2 + 'px';
+        }
+
+        prevBtn.addEventListener('click', prevImage);
+        nextBtn.addEventListener('click', nextImage);
+        zoomInBtn.addEventListener('click', zoomIn);
+        zoomOutBtn.addEventListener('click', zoomOut);
+
+        showImage(currentIndex);
+    </script>
+</body>
 </html>
