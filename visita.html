@@ -10,26 +10,20 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0; /* Added background color for better contrast */
         }
-
         .header {
             background-color: #d2a761;
             padding: 10px 0;
         }
-
         h1 {
             font-size: 24px;
             margin-top: 20px;
         }
-
         p {
             font-size: 18px;
             margin: 20px auto;
             max-width: 800px;
-            text-align: justify; /* Improved text alignment */
         }
-
         .image-gallery {
             display: flex;
             flex-wrap: wrap;
@@ -37,14 +31,16 @@
             gap: 10px;
             margin-top: 20px;
         }
-
+        .image-row {
+            flex-basis: calc(20% - 10px);
+            position: relative;
+            overflow: hidden;
+        }
         .image {
             width: 100%;
             height: auto;
             cursor: pointer;
-            position: relative; /* Added for better overlay positioning */
         }
-
         .overlay {
             position: absolute;
             top: 0;
@@ -58,24 +54,19 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
-
         .overlay i {
             color: white;
             font-size: 30px;
             cursor: pointer;
             margin: 0 10px;
         }
-
         .image:hover .overlay {
             opacity: 1;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Visita Técnica - Campus Colorado do Oeste</h1>
-    </div>
-
+    <h1>Visita Técnica - Campus Colorado do Oeste</h1>
     <p>
         No dia 9 de Agosto de 2023, os alunos do terceiro ano no curso técnico de informática<br>
         do Instituto Federal de Rondônia foram convidados a realizar uma visita técnica ao campus<br>
@@ -84,114 +75,113 @@
         Com as apresentações e palestras, tivemos conhecimento de iniciativas como o "Projeto Judô",<br>
         o "Projeto Silagem", que se tratam de diversos conteúdos virtuais e vídeos relacionados aos seus títulos,<br>
         que contam com a produção de um pequeno grupo de trabalhadores e alunos que se uniram aos projetos.<br>
-        Além disso, foi apresentado o projeto do Ifro Mobile, um aplicativo que tem como função essencial tornar<br>
-        a convivência acadêmica dos estudantes e profissionais mais simples e organizada, juntando aspectos como: notas, número de faltas,<br>
-        horários das aulas e o ID de estudante de cada usuário.<br>
-        Após apresentar os projetos e discutir sobre eles, os alunos foram convidados a assistir uma oficina de fotografia, uma palestra na qual<br>
+        Além disto,foi-se apresentado o projeto do Ifro Mobile, um aplicativo que tem como função essencial tornar<br>
+        a convivência acadêmica dos estudantes e profissionais mais simpes e organizada, juntando aspectos como: notas, número de faltas,<br>
+        horários das aulas e o id de estudante de cada usuário.<br>
+        Após apresentar os projetos e discutir sobre eles, os alunos foram convidados a assistir uma oficina de fotografia,uma palestra na qual<br>
         se debatia sobre a perspectiva artística dos registros fotográficos, e nos dava dicas de técnicas para capturar momentos com uma melhor aptidão.<br>
-        Após isso, fomos convidados a visitar os ambientes do campus enquanto tirávamos fotos, com intenção de aplicar os conhecimentos compartilhados conosco há pouco.</p>
-
-        <div class="image-gallery">
-            <div class="image">
-                <img src="imagens/imagensvisita/imagem1.jfif" alt="Imagem 1">
-                <div class="overlay">
-                    <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
-                    <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
-                    <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
-                </div>
-            </div>
-        </div>
-        <div class="image-gallery">
-            <div class="image">
-                <img src="imagens/imagensvisita/imagem2.jfif" alt="Imagem 2">
-                <div class="overlay">
-                    <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
-                    <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
-                    <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
-                </div>
-            </div>
-        </div>
-        <div class="image-gallery">
-            <div class="image">
-                <img src="imagens/imagensvisita/imagem3.jfif" alt="Imagem 3">
-                <div class="overlay">
-                    <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
-                    <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
-                    <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
-                </div>
-            </div>
-        </div>
-        <div class="image-gallery">
-            <div class="image">
-                <img src="imagens/imagensvisita/imagem4.jfif" alt="Imagem 4">
-                <div class="overlay">
-                    <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
-                    <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
-                    <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
-                </div>
-            </div>
-        </div>
-        <div class="image-gallery">
-            <div class="image">
-                <img src="imagens/imagensvisita/imagem5.jfif" alt="Imagem 5">
-                <div class="overlay">
-                    <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
-                    <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
-                    <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
-                </div>
-            </div>
-        </div>
-        <div class="image-gallery">
-            <div class="image">
-                <img src="imagens/imagensvisita/imagem6.jfif" alt="Imagem 6">
-                <div class="overlay">
-                    <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
-                    <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
-                    <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
-                </div>
-            </div>
-        </div>
-        <div class="image-gallery">
-            <div class="image">
-                <img src="imagens/imagensvisita/imagem7.jfif" alt="Imagem 7">
-                <div class="overlay">
-                    <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
-                    <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
-                    <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
-                </div>
-            </div>
-        </div>
-        <div class="image-gallery">
-            <div class="image">
-                <img src="imagens/imagensvisita/imagem8.jfif" alt="Imagem 8">
-                <div class="overlay">
-                    <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
-                    <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
-                    <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
-                </div>
-            </div>
-        </div>
-        <div class="image-gallery">
-            <div class="image">
-                <img src="imagens/imagensvisita/imagem9.jfif" alt="Imagem 9">
-                <div class="overlay">
-                    <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
-                    <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
-                    <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
-                </div>
-            </div>
-        </div>
-        <div class="image-gallery">
-            <div class="image">
-                <img src="imagens/imagensvisita/imagem10.jfif" alt="Imagem 10">
-                <div class="overlay">
-                    <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
-                    <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
-                    <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
-                </div>
-            </div>
-        </div>
+        Após isso, fomos convidados a visitar os ambientes do campus enquanto tirávamos fotos, com intenção de aplicar os conhecimentos compartilhados conosco a pouco.</p>
     
+    <div class="image-gallery">
+        <div class="image">
+            <img src="imagens/imagensvisita/imagem1.jfif" alt="Imagem 1">
+            <div class="overlay">
+                <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
+                <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
+                <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
+            </div>
+        </div>
+    </div>
+    <div class="image-gallery">
+        <div class="image">
+            <img src="imagens/imagensvisita/imagem2.jfif" alt="Imagem 2">
+            <div class="overlay">
+                <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
+                <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
+                <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
+            </div>
+        </div>
+    </div>
+    <div class="image-gallery">
+        <div class="image">
+            <img src="imagens/imagensvisita/imagem3.jfif" alt="Imagem 3">
+            <div class="overlay">
+                <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
+                <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
+                <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
+            </div>
+        </div>
+    </div>
+    <div class="image-gallery">
+        <div class="image">
+            <img src="imagens/imagensvisita/imagem4.jfif" alt="Imagem 4">
+            <div class="overlay">
+                <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
+                <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
+                <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
+            </div>
+        </div>
+    </div>
+    <div class="image-gallery">
+        <div class="image">
+            <img src="imagens/imagensvisita/imagem5.jfif" alt="Imagem 5">
+            <div class="overlay">
+                <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
+                <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
+                <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
+            </div>
+        </div>
+    </div>
+    <div class="image-gallery">
+        <div class="image">
+            <img src="imagens/imagensvisita/imagem6.jfif" alt="Imagem 6">
+            <div class="overlay">
+                <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
+                <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
+                <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
+            </div>
+        </div>
+    </div>
+    <div class="image-gallery">
+        <div class="image">
+            <img src="imagens/imagensvisita/imagem7.jfif" alt="Imagem 7">
+            <div class="overlay">
+                <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
+                <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
+                <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
+            </div>
+        </div>
+    </div>
+    <div class="image-gallery">
+        <div class="image">
+            <img src="imagens/imagensvisita/imagem8.jfif" alt="Imagem 8">
+            <div class="overlay">
+                <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
+                <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
+                <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
+            </div>
+        </div>
+    </div>
+    <div class="image-gallery">
+        <div class="image">
+            <img src="imagens/imagensvisita/imagem9.jfif" alt="Imagem 9">
+            <div class="overlay">
+                <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
+                <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
+                <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
+            </div>
+        </div>
+    </div>
+    <div class="image-gallery">
+        <div class="image">
+            <img src="imagens/imagensvisita/imagem10.jfif" alt="Imagem 10">
+            <div class="overlay">
+                <i class="fas fa-search-plus" onclick="zoomIn(this)"></i>
+                <i class="fas fa-search-minus" onclick="zoomOut(this)"></i>
+                <i class="fas fa-arrow-right" onclick="nextImage(this)"></i>
+            </div>
+        </div>
+    </div>
 
     <script>
         const images = document.querySelectorAll('.image img');
