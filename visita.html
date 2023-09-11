@@ -8,12 +8,6 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            background-color: #d2a761;
-            padding: 10px 0;
         }
         h1 {
             font-size: 24px;
@@ -26,19 +20,22 @@
         }
         .image-gallery {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
             gap: 10px;
             margin-top: 20px;
         }
-        .image-row {
-            flex-basis: calc(20% - 10px);
-            position: relative;
-            overflow: hidden;
-        }
         .image {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .image img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             cursor: pointer;
         }
         .overlay {
@@ -205,3 +202,4 @@
     </script>
 </body>
 </html>
+
