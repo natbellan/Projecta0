@@ -4,50 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Player de Música</title>
-    <link rel="stylesheet" href="styles.css">
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #1e1e1e;
-    color: #fff;
-    text-align: center;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            text-align: center;
+        }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
 
-.playlist {
-    list-style: none;
-    padding: 0;
-}
+        .playlist {
+            list-style: none;
+            padding: 0;
+        }
 
-.playlist li {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #444;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
+        .playlist li {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #444;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
 
-.playlist li:hover {
-    background-color: #555;
-}
+        .playlist li:hover {
+            background-color: #555;
+        }
 
-audio {
-    width: 100%;
-    margin-top: 20px;
-}
-
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -68,17 +68,21 @@ audio {
         </div>
         <audio id="audio" controls autoplay></audio>
     </div>
-    <script src="script.js">
-const audio = document.getElementById("audio");
-const playlist = document.getElementById("playlist");
+    <script>
+        const audio = document.getElementById("audio");
+        const playlist = document.getElementById("playlist");
 
-playlist.addEventListener("click", (e) => {
-    if (e.target.tagName === "LI") {
-        const src = e.target.getAttribute("data-src");
-        audio.src = src;
-        audio.play();
-    }
-});
+        playlist.addEventListener("click", (e) => {
+            if (e.target.tagName === "LI") {
+                const src = e.target.getAttribute("data-src");
+                audio.src = src;
+                audio.play();
+            }
+        });
+    </script>
+</body>
+</html>
+
 
       
     </script>
